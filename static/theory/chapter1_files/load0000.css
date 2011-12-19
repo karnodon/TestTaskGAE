@@ -1,0 +1,571 @@
+div.langlinks {
+    margin-top: 1em;
+    padding: 5px;
+    border: 1px solid #aaa
+}
+
+#mw-fr-diff-headeritems {
+    direction: ltr
+}
+
+@media screen {
+    .mw-content-ltr {
+        direction: ltr
+    }
+
+    .sitedir-ltr textarea, .sitedir-ltr input {
+        direction: ltr
+    }
+
+    .sitedir-rtl textarea, .sitedir-rtl input {
+        direction: rtl
+    }
+
+    input[type="submit"], input[type="button"], input[type="reset"], input[type="file"] {
+        direction: ltr
+    }
+
+    textarea[dir="ltr"], input[dir="ltr"] {
+        direction: ltr
+    }
+
+    textarea[dir="rtl"], input[dir="rtl"] {
+        direction: rtl
+    }
+
+    abbr, acronym, .explain {
+        border-bottom: 1px dotted black;
+        cursor: help
+    }
+
+    .allpagesredirect, .redirect-in-category, .watchlistredir {
+        font-style: italic
+    }
+
+    span.comment {
+        font-style: italic
+    }
+
+    span.changedby {
+        font-size: 95%
+    }
+
+    img.tex {
+        vertical-align: middle
+    }
+
+    span.texhtml {
+        font-family: serif
+    }
+
+    #wikiPreview.ontop {
+        margin-bottom: 1em
+    }
+
+    #editform, #toolbar, #wpTextbox1 {
+        clear: both
+    }
+
+    .mw-content-ltr .editsection, .mw-content-rtl .mw-content-ltr .editsection {
+        float: right
+    }
+
+    table.mw-htmlform-nolabel td.mw-label {
+        width: 0 !important
+    }
+
+    .thumbcaption {
+        text-align: left
+    }
+
+    .magnify {
+        float: right
+    }
+
+    .autocomment {
+        color: gray
+    }
+
+    table.collapsed tr.collapsable {
+        display: none
+    }
+
+    .success {
+        color: green;
+        font-size: larger
+    }
+
+    .warning {
+        color: #FFA500;
+        font-size: larger
+    }
+
+    .error {
+        color: red;
+        font-size: larger
+    }
+
+    .mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul {
+        margin: 0.3em 0 0 1.5em;
+        padding: 0
+    }
+
+    .mw-content-rtl ul, .mw-content-ltr .mw-content-rtl ul {
+        margin: 0.3em 1.5em 0 0;
+        padding: 0
+    }
+
+    .mw-content-ltr ol, .mw-content-rtl .mw-content-ltr ol {
+        margin: 0.3em 0 0 3.2em;
+        padding: 0
+    }
+
+    .mw-content-rtl ol, .mw-content-ltr .mw-content-rtl ol {
+        margin: 0.3em 3.2em 0 0;
+        padding: 0
+    }
+
+    .mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul {
+        margin: .3em 0 0 1.5em
+    }
+
+    .mw-content-rtl ul, .mw-content-ltr .mw-content-rtl ul {
+        margin: .3em 1.5em 0 0
+    }
+
+    .mw-content-ltr ol, .mw-content-rtl .mw-content-ltr ol {
+        margin: .3em 0 0 3.2em
+    }
+
+    .mw-content-rtl ol, .mw-content-ltr .mw-content-rtl ol {
+        margin: .3em 3.2em 0 0
+    }
+
+    h1:lang(hi), h1:lang(ml) {
+        line-height: 1.5em
+    }
+
+    h2:lang(hi), h2:lang(ml), h3:lang(hi), h3:lang(ml), h4:lang(hi), h4:lang(ml), h5:lang(hi), h5:lang(ml), h6:lang(hi), h6:lang(ml) {
+        line-height: 1.2em
+    }
+
+   .ltr {
+        direction: ltr;
+        unicode-bidi: embed
+    }
+
+    .diff-otitle, .diff-ntitle, .diff-lineno {
+        direction: ltr !important;
+        unicode-bidi: embed
+    }
+
+    div.tright, div.floatright, table.floatright {
+        clear: right;
+        float: right
+    }
+
+    div.tleft, div.floatleft, table.floatleft {
+        float: left;
+        clear: left
+    }
+
+    div.floatright, table.floatright, div.floatleft, table.floatleft {
+        position: relative
+    }
+
+    div#content {
+        padding: 1em;
+        background-image: url(png00001.png);
+        background-position: top left;
+        background-repeat: repeat-y;
+        color: black;
+        direction: ltr
+    }
+
+    div#mw-head {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%
+    }
+
+    div#mw-head h5 {
+        margin: 0;
+        padding: 0
+    }
+
+    div#content {
+        line-height: 1.5em
+    }
+
+    #bodyContent {
+        font-size: 0.8em
+    }
+
+    a {
+        text-decoration: none;
+        color: #0645ad;
+        background: none
+    }
+
+    a:visited {
+        color: #0b0080
+    }
+
+    a:active {
+        color: #faa700
+    }
+
+    a:hover, a:focus {
+        text-decoration: underline
+    }
+
+    a.stub {
+        color: #772233
+    }
+
+    a.new, #p-personal a.new {
+        color: #ba0000
+    }
+
+    a.new:visited, #p-personal a.new:visited {
+        color: #a55858
+    }
+
+    img {
+        border: none;
+        vertical-align: middle
+    }
+
+    hr {
+        height: 1px;
+        color: #aaa;
+        background-color: #aaa;
+        border: 0;
+        margin: .2em 0 .2em 0
+    }
+
+    h2, h3, h4, h5, h6 {
+        color: black;
+        background: none;
+        font-weight: normal;
+        margin: 0;
+        padding-top: .5em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #aaa;
+        width: auto
+    }
+    h1.firstHeading {
+       color: black;
+        background: none;
+        font-weight: normal;
+        margin: 0;
+        overflow: hidden;
+        padding-top: .5em;
+        padding-bottom: .17em;
+        border-bottom: 1px solid #aaa;
+        width: auto;
+        height: 40px;
+    }
+
+    h2 {
+        font-size: 150%
+    }
+
+    h2 .editsection {
+        font-size: 67%
+    }
+
+    h3, h4, h5, h6 {
+        border-bottom: none;
+        font-weight: bold
+    }
+
+    h3 {
+        font-size: 132%
+    }
+
+    h3 .editsection {
+        font-size: 76%;
+        font-weight: normal
+    }
+
+    h4 {
+        font-size: 116%
+    }
+
+    h4 .editsection {
+        font-size: 86%;
+        font-weight: normal
+    }
+
+    h5 {
+        font-size: 100%
+    }
+
+    h5 .editsection {
+        font-weight: normal
+    }
+
+    h6 {
+        font-size: 80%
+    }
+
+    h6 .editsection {
+        font-size: 125%;
+        font-weight: normal
+    }
+
+    p {
+        margin: .4em 0 .5em 0;
+        line-height: 1.5em
+    }
+
+    p img {
+        margin: 0
+    }
+
+    q {
+        font-family: Times, "Times New Roman", serif;
+        font-style: italic
+    }
+
+    pre, code, tt, kbd, samp {
+        font-family: monospace, "Courier New",serif
+    }
+
+    code {
+        background-color: #f9f9f9
+    }
+
+    pre {
+        padding: 1em;
+        border: 1px dashed #2f6fab;
+        color: black;
+        background-color: #f9f9f9;
+        line-height: 1.3em
+    }
+
+    ul {
+        line-height: 1.5em;
+        list-style-type: square;
+        margin: .3em 0 0 1.5em;
+        padding: 0;
+        list-style-image: url(wDltzBKA.png);
+    }
+
+    ol {
+        line-height: 1.5em;
+        margin: .3em 0 0 3.2em;
+        padding: 0;
+        list-style-image: none
+    }
+
+    li {
+        margin-bottom: .1em
+    }
+
+    dt {
+        font-weight: bold;
+        margin-bottom: .1em
+    }
+
+    dl {
+        margin-top: .2em;
+        margin-bottom: .5em
+    }
+
+    dd {
+        line-height: 1.5em;
+        margin-left: 2em;
+        margin-bottom: .1em
+    }
+
+    table {
+        font-size: 100%
+    }
+
+    fieldset {
+        border: 1px solid #2f6fab;
+        margin: 1em 0 1em 0;
+        padding: 0 1em 1em;
+        line-height: 1.5em
+    }
+
+    fieldset.nested {
+        margin: 0 0 0.5em 0;
+        padding: 0 0.5em 0.5em
+    }
+
+    legend {
+        padding: .5em;
+        font-size: 95%
+    }
+
+    form {
+        border: none;
+        margin: 0
+    }
+
+    textarea {
+        width: 100%;
+        padding: .1em
+    }
+
+    select {
+        vertical-align: top
+    }
+
+    div.floatright, table.floatright {
+        margin: 0 0 .5em .5em;
+        border: 0
+    }
+
+    div.floatright p {
+        font-style: italic
+    }
+
+    div.floatleft, table.floatleft {
+        margin: 0 .5em .5em 0;
+        border: 0
+    }
+
+    div.floatleft p {
+        font-style: italic
+    }
+
+    div.thumb {
+        margin-bottom: .5em;
+        width: auto;
+        background-color: transparent
+    }
+
+    div.thumbinner {
+        border: 1px solid #ccc;
+        padding: 3px !important;
+        background-color: #f9f9f9;
+        font-size: 94%;
+        text-align: center;
+        overflow: hidden
+    }
+
+    html .thumbimage {
+        border: 1px solid #ccc
+    }
+
+    html .thumbcaption {
+        border: none;
+        text-align: left;
+        line-height: 1.4em;
+        padding: 3px !important;
+        font-size: 94%
+    }
+
+    div.magnify {
+        float: right;
+        border: none !important;
+        background: none !important
+    }
+
+    div.magnify a, div.magnify img {
+        display: block;
+        border: none !important;
+        background: none !important
+    }
+
+    div.tright {
+        margin: .5em 0 1.3em 1.4em
+    }
+
+    div.tleft {
+        margin: .5em 1.4em 1.3em 0
+    }
+
+    img.thumbborder {
+        border: 1px solid #dddddd
+    }
+
+    #contentSub, #contentSub2 {
+        font-size: 84%;
+        line-height: 1.2em;
+        margin: 0 0 1.4em 1em;
+        color: #7d7d7d;
+        width: auto
+    }
+
+    span.subpages {
+        display: block
+    }
+
+    .center {
+        width: 100%;
+        text-align: center
+    }
+
+    *.center * {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .small {
+        font-size: 94%
+    }
+
+    table.small {
+        font-size: 100%
+    }
+
+    h3, h4, h5 {
+        margin-bottom: .3em
+    }
+
+    #firstHeading {
+        padding-top: 0;
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 0.1em;
+        line-height: 1.2em;
+        font-size: 1.6em;
+        padding-bottom: 0
+    }
+
+    div#content a.extiw, div#content a.extiw:active {
+        color: #36b;
+        background: none;
+        padding: 0
+    }
+
+    div#content a.extiw:visited {
+        color: #636
+    }
+
+    div#content a.extiw:active {
+        color: #b63
+    }
+
+    div#content a.external {
+        color: #36b
+    }
+
+    div#content a.external:visited {
+        color: #636;
+    }
+
+    div#content a.external:active {
+        color: #b63
+    }
+
+    div#content .printfooter {
+        display: none
+    }
+
+    #bodyContent {
+        width: 100%
+    }
+
+    div#bodyContent {
+        line-height: 1.5em
+    }
+}
+
+/* cache key: ruwiki:resourceloader:filter:minify-css:4:b6d00a1b948b1776cf1b2ed23395674f */

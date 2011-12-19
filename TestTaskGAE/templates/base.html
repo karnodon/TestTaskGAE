@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $("ul.subnav").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled - Adds empty span tag after ul.subnav
+
+            $("ul.topnav li span").click(function() { //When trigger is clicked...
+
+                //Following events are applied to the subnav itself (moving subnav up and down)
+                $(this).parent().find("ul.subnav").slideDown('fast').show(); //Drop down the subnav on click
+
+                $(this).parent().hover(function() {
+                }, function(){
+                    $(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
+                });
+
+                //Following events are applied to the trigger (Hover events for the trigger)
+            }).hover(function() {
+                        $(this).addClass("subhover"); //On hover over, add class "subhover"
+                    }, function(){	//On Hover Out
+                        $(this).removeClass("subhover"); //On hover out, remove class "subhover"
+                    });
+
+        });
+    </script>
+    <link type="text/css"  href="/static/css/base.css" rel="stylesheet"/>
+    <link type="text/css" href="/static/css/cupertino/jquery-ui.css" rel="stylesheet"/>
+    {% block links %}{% endblock %}
+    <title>{% block title %}Тестирование{% endblock %}</title>
+</head>
+<body onload="{% block loader %}{% endblock %}">
+<table class="back" width="760">
+    <tr>
+        <td valign="top" >
+            {% block header %}
+                <H1 id="main">{% comment %}<img src="/static/images/header_bg.jpg" alt="ГОУ 1748 ЦО Вертикаль" style="vertical-align: top;" align="left" height="90" width="250">{% endcomment %}Сайт учителя математики<br>Морозовой Ирины Сергеевны</H1>
+                <table width="100%" class="gradient"><tr>
+                    <td align="left" class="headerText">Пользователь: <span class="headerText highlight">
+                        {% if user.is_authenticated %}{{ user.username }}
+                        {% else %}Гость{% endif %}</span></td>
+                    <td align="right">{% if user.is_authenticated %}<a href="/accounts/logout/">Выход</a>{% else %}<a href="/accounts/login/">Войти</a>{% endif %}</td></tr></table>
+                <div class="container">
+                    <ul class="topnav">
+                        <li><a href="/chapter/">Главная</a></li>
+                        {% if user.is_authenticated %}
+                            <li>
+                                <a href="#">Тестирование</a>
+                                <ul class="subnav">
+                                    {%  block menuinfo %}
+                                        {% if teacher %}
+                                            <li><a href="/statistics/students/">Статистика по студентам</a></li>
+                                            <li><a href="/statistics/tests/">Статистика по тестам</a></li>
+                                        {% else %}
+                                            {% if chapter_list %}
+                                                {% for item in chapter_list %}
+                                                    <li><a href="/chapter/{{ item.id }}/"><nobr>{{item}}</nobr></a></li>
+                                                {% endfor %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endblock %}
+                                </ul>
+                            </li>
+                        {% endif %}
+                        <li>
+                            <a href="#">Информация</a>
+                            <ul class="subnav">
+                                <li><a href="/theory/chapter1.html">Дроби</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Обо мне</a>
+                            <ul class="subnav">
+                                <li><a href="/bio/">Биография</a></li>
+                                <li><a href="/feedback/">Обратная связь</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            {% endblock %}
+
+            {% block main %}{% endblock %}
+        </td>
+    </tr>
+    {% block footer %}<tr><td valign="bottom"><span class="copyright">© 2011, Морозова Ирина, Морозов Максим, frostbite3-at-gmail.com</span></td></tr>{% endblock %}
+</table>
+</body>
+</html>

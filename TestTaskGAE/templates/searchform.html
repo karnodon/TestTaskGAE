@@ -1,0 +1,78 @@
+<div id="searchform">
+    <form method="GET">
+        {% if form.non_field_errors %}
+            <div>
+                {% for err in form.non_field_errors %}
+                    <div class="errormessage">{{ err }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% for field in form.visible_fields %}
+            {% for err in field.errors %}
+                <div class="errormessage">{{ err }}</div>
+            {% endfor %}
+        {% endfor %}
+        <ul>
+            {% for field in form.visible_fields %}
+                {% if field.name != form.pagesize.name %}
+                    <li {% if field.errors %}class="field_error"{% endif %}>
+                        {{ field.label_tag }}
+                        {{ field }}
+                    </li>
+                {% endif %}
+            {% endfor %}
+            <li>
+                <input type="submit" title="Найти" value="Найти">
+            </li>
+        </ul>
+
+        {{ form.page }}
+        <div class="pagination">
+            {% if stats.paginator and stats.paginator.num_pages > 1%}
+                <span class="step-links">
+                    {% if stats.has_previous %}
+                        <a id="prev" href="#"><<</a>
+                    {% endif %}
+                    <span class="current">
+                        {% for pn in stats.paginator.page_range %}
+                            <a href="#" class="{% if pn == stats.number%}active{% endif %} pagelink">&nbsp;{{ pn }}&nbsp;</a>
+                        {% endfor %}
+                    </span>
+                    {% if stats.has_next %}
+                        <a id="next" href="#">>></a>
+                    {% endif %}
+                </span>
+            {% endif %}
+            {{ form.pagesize }}
+        </div>
+    </form>
+</div>
+<script>
+    $(function() {
+        $.datepicker.setDefaults( $.datepicker.regional[ "ru" ]);
+        $( "#id_start" ).datepicker( );
+        $( "#id_end" ).datepicker( );
+        $( "input:submit" ).button();
+    });
+    $('#next').click(
+            function() {
+                var val = $('#id_page').val();
+                if (val == "")
+                    val = 1;
+                $('#id_page').val(parseInt(val) + 1);
+                $('#searchform form').submit();
+            }
+    );
+    $('#prev').click(
+            function() {
+                $('#id_page').val(parseInt($('#id_page').val()) - 1);
+                $('#searchform form').submit();
+            }
+    );
+    $('.pagelink').click(
+            function() {
+                $('#id_page').val(parseInt($(this).text()));
+                $('#searchform form').submit();
+            }
+    )
+</script>
